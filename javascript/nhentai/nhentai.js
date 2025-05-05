@@ -15,6 +15,9 @@ function getPopularManga(page) {
   return manga;
 }
 
+// ✅ Alias to fix "getPopular not implemented"
+const getPopular = getPopularManga;
+
 function getMangaDetails(url) {
   const document = fetch(url).parse();
   const title = document.select("h1.title").text();
