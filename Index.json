@@ -1,0 +1,13 @@
+[
+    {
+      "name": "nhentai",
+      "language": "en",
+      "type": "single",
+      "baseUrl": "https://nhentai.net",
+      "iconUrl": "https://www.nhentai.net/favicon.ico",
+      "isNsfw": true,
+      "version": "1.0.0",
+      "path": "javascript/nhentai/nhentai.js"
+    }
+  ]
+  
