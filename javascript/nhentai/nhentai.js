@@ -50,3 +50,18 @@ function getPageList(chapterUrl) {
   }
   return pages;
 }
+
+function search(query, page = 1) {
+  const url = `${BASE_URL}/search/?q=${encodeURIComponent(query)}&page=${page}`;
+  const document = fetch(url).parse();
+  const manga = [];
+  const elements = document.select(".gallery");
+  for (const element of elements) {
+    manga.push({
+      title: element.select(".caption").text(),
+      thumbnail_url: element.select("img").attr("data-src"),
+      url: element.select("a").attr("href")
+    });
+  }
+  return manga;
+}
